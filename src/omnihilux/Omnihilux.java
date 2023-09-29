@@ -19,13 +19,14 @@ public class Omnihilux extends ApplicationCore {
 
     public static void main(String[] args) {
         new SdlApplication(new Omnihilux(), new SdlConfig() {{
-            width = 800;
-            height = 600;
+            width = 1920;
+            height = 1080;
             samples = 12;
+            maximized = true;
+            fullscreen = true;
 
             title = "Omnihilux";
             initialBackgroundColor = Color.clear;
-            initialVisible = false;
         }});
     }
 
@@ -56,7 +57,7 @@ public class Omnihilux extends ApplicationCore {
 
     @Override
     public void resize(int width, int height) {
-        super.update();
+        super.resize(width, height);
         scene.resize(width, height);
     }
 }
